@@ -56,7 +56,7 @@ export class NFTModule extends BaseModule {
     web3: Web3,
     tokenId?: string,
   ): Promise<ValidateTokenOwnershipResponse> {
-    // Make sure ERC1155 has a tokenId
+    // Make sure if ERC1155 has a tokenId
     if (contractType === 'ERC1155' && !tokenId) {
       throw new Error('ERC1155 requires a tokenId');
     }
